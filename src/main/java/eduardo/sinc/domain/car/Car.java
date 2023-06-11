@@ -22,7 +22,7 @@ import lombok.Setter;
 // @EqualsAndHashCode(of = "id")
 public class Car {
     @Id
-    @SequenceGenerator(name = "car_id_seq", sequenceName = "car_id_seq", allocationSize = 1, initialValue = 0)
+    @SequenceGenerator(name = "car_id_seq", sequenceName = "car_id_seq", allocationSize = 1, initialValue = 10)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "car_id_seq")
     private Integer id;
     private String plate;
