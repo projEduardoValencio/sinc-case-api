@@ -15,6 +15,20 @@ CREATE TABLE client (
     phone TEXT NOT NULL
 );
 
+CREATE TABLE car_rental (
+    id SERIAL PRIMARY KEY,
+    client_id INT,
+    car_id INT,
+    start_date DATE NOT NULL,
+    end_date DATE NOT NULL,
+    CONSTRAINT fk_client
+        FOREIGN KEY(client_id)
+            REFERENCES client(id),
+    CONSTRAINT fk_car
+        FOREIGN KEY(car_id)
+            REFERENCES car(id)
+);
+
 -- mock
 INSERT INTO car (plate, model, brand, current_km, vehicle_year) VALUES ( 'MODELO1', 'GOL', 'VOLKSWAGEN', 2000.0, '2012-01-01');
 INSERT INTO car ( plate, model, brand, current_km, vehicle_year) VALUES ('MODELO2', 'HB20', 'HYUNDAI', 2000.0, '2015-01-01');
