@@ -22,7 +22,7 @@ import eduardo.sinc.domain.car.CarRepository;
 import jakarta.validation.Valid;
 
 @RestController
-@CrossOrigin
+@CrossOrigin(origins = "http://54.173.116.19:3000")
 @RequestMapping("/car")
 public class CarController {
     @Autowired

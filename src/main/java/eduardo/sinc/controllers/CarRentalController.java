@@ -25,7 +25,7 @@ import eduardo.sinc.domain.client.Client;
 import eduardo.sinc.domain.client.ClientRepository;
 
 @RestController
-@CrossOrigin
+@CrossOrigin(origins = "http://54.173.116.19:3000")
 @RequestMapping("/rental")
 public class CarRentalController {
     @Autowired
